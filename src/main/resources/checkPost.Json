@@ -8,25 +8,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -35,25 +31,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -62,25 +54,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -89,25 +77,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -116,25 +100,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -143,25 +123,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -170,25 +146,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -197,25 +169,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -224,25 +192,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     },
     {
@@ -251,25 +215,21 @@
         "id": {
           "type": "integer"
         },
-        "name": {
+        "user_id": {
+          "type": "integer"
+        },
+        "title": {
           "type": "string"
         },
-        "email": {
-          "type": "string"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "status": {
+        "body": {
           "type": "string"
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "gender",
-        "status"
+        "user_id",
+        "title",
+        "body"
       ]
     }
   ]
