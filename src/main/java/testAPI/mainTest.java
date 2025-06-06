@@ -3,23 +3,20 @@ package testAPI;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.hamcrest.Matchers;
 import org.json.JSONObject;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
 import org.testng.annotations.Test;
 import java.io.File;
-
 import static io.restassured.RestAssured.given;
 
-
 public class mainTest {
-    public static final String gorestToken = "2f9e89e71919f4d431604092fcca4117a2ece960acac99f437d62598c431b8f7";
-    public static final String existingUser = "7932291";
+    public static final String gorestToken =
+            "2f9e89e71919f4d431604092fcca4117a2ece960acac99f437d62598c431b8f7";
+    public static final String existingUser =
+            "7935236";
 
 
-    @BeforeTest
+   @Test
     public void testDelete() {
-        given()
+        given().log().all()
                 .header("Authorization", "Bearer " + gorestToken)
                 .when()
                 .delete("https://gorest.co.in/public/v2/users/" + existingUser)
@@ -55,7 +52,35 @@ public class mainTest {
         System.out.println("<--------------------POST SUCCEED------------------->");
     }
 
-    @AfterTest
+    @Test
+    public void negativePost(){
+//        Negative Case : Jika tidak mengisi email, maka Gorest tidak akan menerima upload
+//        Expected Status Code 422
+
+       String theName = "Jason Timberlake";
+       String theMail = "";
+       String theGender = "male";
+       String theStatus = "inactive";
+
+       JSONObject theJasonObject = new JSONObject();
+       theJasonObject.put("name", theName);
+       theJasonObject.put("email", theMail);
+       theJasonObject.put("gender", theGender);
+       theJasonObject.put("status", theStatus);
+
+       given().log().all()
+               .header("Authorization", "Bearer " + gorestToken)
+               .header("content-type", "application/json")
+               .header("accept", "application/json")
+               .body(theJasonObject.toString())
+               .when()
+               .post("https://gorest.co.in/public/v2/users")
+               .then().log().all()
+               .statusCode(422);
+        System.out.println("<----------------------- New User Not Posted -----------------------> ");
+    }
+
+    @Test
     public void apiGetlist() {
 
         File getResult = new File("src/main/resources/checkGet.Json");
