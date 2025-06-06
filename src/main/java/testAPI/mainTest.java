@@ -5,7 +5,6 @@ import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 import java.io.File;
-
 import static io.restassured.RestAssured.given;
 
 public class mainTest {
@@ -51,6 +50,34 @@ public class mainTest {
                 .then().log().all()
                 .statusCode(201);
         System.out.println("<--------------------POST SUCCEED------------------->");
+    }
+
+    @Test
+    public void negativePost(){
+//        Negative Case : Jika tidak mengisi email, maka Gorest tidak akan menerima upload
+//        Expected Status Code 422
+
+       String theName = "Jason Timberlake";
+       String theMail = "";
+       String theGender = "male";
+       String theStatus = "inactive";
+
+       JSONObject theJasonObject = new JSONObject();
+       theJasonObject.put("name", theName);
+       theJasonObject.put("email", theMail);
+       theJasonObject.put("gender", theGender);
+       theJasonObject.put("status", theStatus);
+
+       given().log().all()
+               .header("Authorization", "Bearer " + gorestToken)
+               .header("content-type", "application/json")
+               .header("accept", "application/json")
+               .body(theJasonObject.toString())
+               .when()
+               .post("https://gorest.co.in/public/v2/users")
+               .then().log().all()
+               .statusCode(422);
+        System.out.println("<----------------------- New User Not Posted -----------------------> ");
     }
 
     @Test
