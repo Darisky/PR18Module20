@@ -11,10 +11,9 @@ public class mainTest {
     public static final String gorestToken =
             "2f9e89e71919f4d431604092fcca4117a2ece960acac99f437d62598c431b8f7";
     public static final String existingUser =
-            "7935236";
+            "7936303";
 
-
-   @Test
+    @Test(priority = 1)
     public void testDelete() {
         given().log().all()
                 .header("Authorization", "Bearer " + gorestToken)
@@ -26,7 +25,7 @@ public class mainTest {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void postNew() {
 
         String userName = "The Name is Den";
@@ -52,7 +51,7 @@ public class mainTest {
         System.out.println("<--------------------POST SUCCEED------------------->");
     }
 
-    @Test
+    @Test(priority = 3)
     public void negativePost(){
 //        Negative Case : Jika tidak mengisi email, maka Gorest tidak akan menerima upload
 //        Expected Status Code 422
@@ -80,7 +79,7 @@ public class mainTest {
         System.out.println("<----------------------- New User Not Posted -----------------------> ");
     }
 
-    @Test
+    @Test(priority = 4)
     public void apiGetlist() {
 
         File getResult = new File("src/main/resources/checkGet.Json");
